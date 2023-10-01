@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:organo/controllers/cart_controller.dart';
 import 'package:organo/controllers/popular_product_controller.dart';
 import 'package:organo/controllers/recommended_product_controller.dart';
 import 'package:organo/pages/cart/cart_page.dart';
@@ -23,13 +24,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Get.find<CartController>().getCartData();
     Get.find<PopularProductController>().getPopularProductList();
     Get.find<RecommendedProductController>().getRecommendedProductList();
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: MainOrganoPage(),
-      initialRoute: RouteHelper.initial,
+      //home: MainOrganoPage(),
+      initialRoute: RouteHelper.getInitial(),
       getPages: RouteHelper.routes,
     );
   }

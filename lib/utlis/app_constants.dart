@@ -6,6 +6,8 @@ class AppConstants {
   static const String RECOMMENDED_PRODUCT_URI = "/api/v1/products/recommended";
   static const String UPLOAD_URL = "/uploads/";
   static const String TOKEN = "Organotoken";
+  static const String CART_LIST = "cart-list";
+  static const String CART_HISTORY_LIST = "cart-history-list";
 }
 //http://mvs.bslmeiyu.com
 //http://127.0.0.1:8000
